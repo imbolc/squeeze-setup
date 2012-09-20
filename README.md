@@ -3,15 +3,14 @@ Setup Debian Squeeze to server
 
 Run from root
 -------------
-    # cd ~
-    # wget --no-check-certificate https://raw.github.com/imbolc/squeeze-setup/master/root-install.sh
+    # cd; wget --no-check-certificate https://raw.github.com/imbolc/squeeze-setup/master/root-install.sh
     # bash root-install.sh
 
 Create user
 -----------
     # adduser <username>
     
-Remove user sudo password. Add to **/etc/sudoers/**:
+Remove user sudo password. Add to **/etc/sudoers**
 
     user ALL=NOPASSWD: ALL
 
@@ -19,7 +18,7 @@ Remove user sudo password. Add to **/etc/sudoers/**:
 Run from user
 -------------
     # sudo su <user>
-    $ wget --no-check-certificate https://raw.github.com/imbolc/squeeze-setup/master/user-install.sh
+    $ cd; wget --no-check-certificate https://raw.github.com/imbolc/squeeze-setup/master/user-install.sh
     $ bash user-install.sh
 
 

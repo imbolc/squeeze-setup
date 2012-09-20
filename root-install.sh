@@ -25,14 +25,6 @@ deb http://backports.debian.org/debian-backports squeeze-backports main
 deb http://downloads-distro.mongodb.org/repo/debian-sysvinit dist 10gen
 EOF
 
-
-echo "apt.conf.d"
-# Set stable repo the default repo
-# Disable autoinstalling recommended packages
-cat > /etc/apt/apt.conf.d/07custom << EOF
-APT::Install-Suggested "false";
-EOF
-
 echo "aptitude update"
 # Update repositories
 aptitude update && upgrade
