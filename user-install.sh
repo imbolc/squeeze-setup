@@ -20,13 +20,13 @@ echo "=== Enable sudo autocomplete"
 echo "complete -cf sudo" >> ~/.bashrc
 
 echo "=== Bash aliases"
-cat > '~/.bash_aliases' << EOF
+cat > ~/.bash_aliases << EOF
 alias nginx-restart='sudo /etc/init.d/nginx configtest && sudo /etc/init.d/nginx restart'
 alias chmod-standard="find ./ -type d | xargs chmod -v 755 ; find ./ -type f | xargs chmod -v 644"
 EOF
 
 echo "=== Mercurial config"
-cat > '~/.hgrc' << EOF
+cat > ~/.hgrc << EOF
 [ui]
 username = $(whoami) <$(whoami)@$(hostname)>
 EOF
