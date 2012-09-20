@@ -43,7 +43,7 @@ apt-key adv --keyserver subkeys.pgp.net --recv 9ECBEC467F0CEB10
 
 echo "=== LOCALES"
 
-aptitude install locales 
+aptitude install -y locales 
 echo "LANG=en_US.UTF-8" > /etc/default/locale
 cat > /etc/locale.gen << EOF
 en_US.UTF-8 UTF-8
@@ -54,7 +54,7 @@ locale-gen
 
 echo "=== GIT"
 
-aptitude install git-core
+aptitude install -y git-core
 
 
 echo "=== VIM"
@@ -64,7 +64,7 @@ git clone https://github.com/imbolc/.vim
 ln -s ~/.vim/.vimrc ~
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
-aptitude install vim-nox
+aptitude install -y vim-nox
 update-alternatives --set editor /usr/bin/vim.nox
 
 
@@ -76,25 +76,25 @@ echo "=== INSTALL PACKAGES"
 # libjpeg62-dev libfreetype6-dev --> build PIL from source
 # postgresql-server-dev-all --> build psycopg from source
 # libmysqld-dev --> build mysql driver from source
-aptitude install libxml2-dev libxslt1-dev
-aptitude install libcurl4-openssl-dev
-aptitude install libjpeg62-dev libfreetype6-dev
-aptitude install postgresql-server-dev-all libmysqld-dev libmemcached-dev
-aptitude install libtokyocabinet-dbg libtokyocabinet-dev libtokyocabinet8
-aptitude install libevent1 libevent-dev
+aptitude install -y libxml2-dev libxslt1-dev
+aptitude install -y libcurl4-openssl-dev
+aptitude install -y libjpeg62-dev libfreetype6-dev
+aptitude install -y postgresql-server-dev-all libmysqld-dev libmemcached-dev
+aptitude install -y libtokyocabinet-dbg libtokyocabinet-dev libtokyocabinet8
+aptitude install -y libevent1 libevent-dev
 
-aptitude install htop screen mc sudo apache2-utils gcc
-aptitude install nginx runit
+aptitude install -y htop screen mc sudo apache2-utils gcc
+aptitude install -y nginx runit
 
-aptitude install python python-setuptools python-dev
+aptitude install -y python python-setuptools python-dev
 easy_install pip
 pip install virtualenv fabric mercurial
 
 if [ "$INSTALL_POSTGRES" == "YES" ]; then
-    aptitude install posgresql-9.1
+    aptitude install -y posgresql-9.1
 fi
 if [ "$INSTALL_MONGO" == "YES" ]; then
-    aptitude install mongodb-10gen
+    aptitude install -y mongodb-10gen
     update-rc.d mongodb defaults
     /etc/init.d/mongodb start
 fi
