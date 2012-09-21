@@ -17,7 +17,7 @@ Remove user sudo password. Add to **/etc/sudoers**
 
 Run from user
 -------------
-    # sudo su <user>
+    # su <user>
     $ cd; wget --no-check-certificate https://raw.github.com/imbolc/squeeze-setup/master/user-install.sh
     $ bash user-install.sh
 

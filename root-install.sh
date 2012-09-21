@@ -83,7 +83,7 @@ easy_install pip
 pip install virtualenv fabric mercurial
 
 if [ "$INSTALL_POSTGRES" == "YES" ]; then
-    aptitude install -y posgresql-9.1
+    aptitude install -y postgresql-9.1
 fi
 if [ "$INSTALL_MONGO" == "YES" ]; then
     aptitude install -y mongodb-10gen
