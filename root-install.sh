@@ -8,6 +8,11 @@ INSTALL_MONGO="NO"
 
 echo "=== APTITUDE"
 
+echo "disable autoinstalling recommended packages"
+cat > /etc/apt/apt.conf.d/07custom << EOF
+APT::Install-Suggested "false";
+EOF
+
 echo "aptitude repositories"
 cat > /etc/apt/sources.list << EOF
 deb http://ftp.ru.debian.org/debian/ squeeze main contrib non-free
@@ -74,7 +79,7 @@ aptitude install -y postgresql-server-dev-all libmysqld-dev libmemcached-dev
 aptitude install -y libtokyocabinet-dbg libtokyocabinet-dev libtokyocabinet8
 aptitude install -y libevent1 libevent-dev
 
-aptitude install -y htop screen mc sudo apache2-utils gcc
+aptitude install -y cron htop screen mc sudo apache2-utils gcc
 aptitude install -y nginx runit
 
 aptitude install -y python python-setuptools python-dev
