@@ -54,7 +54,6 @@ echo "=== VIM"
 rm -R ~/.vim ~/.vimrc
 git clone https://github.com/imbolc/.vim
 ln -s ~/.vim/.vimrc ~
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
 aptitude install -y vim-nox
 update-alternatives --set editor /usr/bin/vim.nox

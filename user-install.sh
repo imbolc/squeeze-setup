@@ -10,7 +10,6 @@ echo "=== VIM"
 cd; rm -R ~/.vim ~/.vimrc
 git clone https://github.com/imbolc/.vim
 ln -s ~/.vim/.vimrc ~
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
 update-alternatives --set editor /usr/bin/vim.nox
 
