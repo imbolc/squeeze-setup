@@ -21,6 +21,7 @@ echo "complete -cf sudo" >> ~/.bashrc
 echo "=== Bash aliases"
 cat > ~/.bash_aliases << EOF
 alias nginx-restart='sudo /etc/init.d/nginx configtest && sudo /etc/init.d/nginx restart'
+alias upgrade="sudo aptitude update; sudo aptitude upgrade"
 alias chmod-standard="find ./ -type d | xargs chmod -v 755 ; find ./ -type f | xargs chmod -v 644"
 alias rm-pyc-files="find . -name '*.pyc' -exec rm '{}' ';'"
 EOF
