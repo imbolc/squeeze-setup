@@ -15,15 +15,15 @@ EOF
 
 echo "aptitude repositories"
 cat > /etc/apt/sources.list << EOF
-deb http://ftp.ru.debian.org/debian/ squeeze main contrib non-free
-deb-src http://ftp.ru.debian.org/debian/ squeeze main contrib non-free
+deb http://ftp.debian.org/debian/ squeeze main contrib non-free
+deb-src http://ftp.debian.org/debian/ squeeze main contrib non-free
 
 deb http://security.debian.org/ squeeze/updates main contrib non-free
 deb-src http://security.debian.org/ squeeze/updates main contrib non-free
 
 # squeeze-updates, previously known as 'volatile'
-deb http://ftp.ru.debian.org/debian/ squeeze-updates main contrib non-free
-deb-src http://ftp.ru.debian.org/debian/ squeeze-updates main contrib non-free
+deb http://ftp.debian.org/debian/ squeeze-updates main contrib non-free
+deb-src http://ftp.debian.org/debian/ squeeze-updates main contrib non-free
 
 deb http://backports.debian.org/debian-backports squeeze-backports main
 
