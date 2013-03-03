@@ -1,0 +1,27 @@
+deb http://ftp.debian.org/debian/ squeeze main contrib non-free
+deb-src http://ftp.debian.org/debian/ squeeze main contrib non-free
+
+deb http://security.debian.org/ squeeze/updates main contrib non-free
+deb-src http://security.debian.org/ squeeze/updates main contrib non-free
+
+# squeeze-updates, previously known as 'volatile'
+deb http://ftp.debian.org/debian/ squeeze-updates main contrib non-free
+deb-src http://ftp.debian.org/debian/ squeeze-updates main contrib non-free
+
+deb http://backports.debian.org/debian-backports squeeze-backports main
+
+# mongodb
+deb http://downloads-distro.mongodb.org/repo/debian-sysvinit dist 10gen
+
+# postgresql
+deb http://pgapt.debian.net/ squeeze-pgdg main
+
+# rabbitmq
+deb http://www.rabbitmq.com/debian/ testing main
+
+deb http://dl.google.com/linux/deb/ stable non-free main
+deb http://download.virtualbox.org/virtualbox/debian squeeze contrib non-free
+#deb http://deb.opera.com/opera squeeze non-free
+
+#deb http://deb.torproject.org/torproject.org squeeze main
+
